@@ -43,9 +43,9 @@ function gridSideLength() {
 }
 
 function userNumber() {
-    let input = parseInt(prompt('What length of the sides did you want', '16').trim());
-    while (!Number.isInteger(input) || input <= 0) {
-        input = parseInt(prompt('Please enter a valid positive integer!', '16').trim());
+    let input = parseInt(prompt('What length of the sides did you want (1 - 100)', '16').trim());
+    while (!Number.isInteger(input) || input <= 0 || input > 100) {
+        input = parseInt(prompt('Please enter a valid positive integer!(1 - 100)', '16').trim());
     }
     return input;
 }
